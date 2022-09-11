@@ -1,0 +1,347 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light: hsl(270, 3%, 87%);
+    --Dark: hsl(279, 6%, 55%);
+    --Very: hsl(278, 68%, 11%);
+}
+/*PARA QUITAR FLECHAS DEL NUMBER*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+/*HTML*/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+
+    font-family:'Lato', sans-serif;
+}
+@media (min-width: 950px) {
+    .todo-contenido{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*FONDO*/
+.img-fondo{
+    background-image: url(../images/bg-main-mobile.png);
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 0;
+    
+}
+.img-fondo{
+    width: 100%;
+    height: 100%;
+}
+@media (min-width: 950px) {
+    .img-fondo{
+        background-image: url(../images/bg-main-desktop.png);
+        background-repeat: repeat-y;
+        position: absolute;
+        top: 0;
+        width: 40rem;
+        height: 100%;
+    }
+}
+
+/*TARJETAS*/
+.tarjetas{
+    color: var(--White);
+}
+.tarjetas img{
+    width: 30rem;
+}
+@media (min-width: 950px) {
+    .tarjetas img{
+        width: 35rem;
+    }
+}
+/*CARD-FRONT*/
+.card-front{
+    position: relative;
+    top: 12rem;
+    margin-left: 2rem;
+}
+/* .card-front__contenido{
+    position: absolute;
+    top: 8rem;
+    left: 3rem;
+    line-height: 2;
+
+} */
+p{
+    margin: 0;
+}
+.card{
+    position: relative;
+}
+
+.visual-fecha{
+    display: flex;
+    position: absolute;
+    top: 13rem;
+    left: 25rem;
+}
+.visual-nombre{
+    position: absolute;
+    top: 13rem;
+    left: 2rem;
+    text-transform: uppercase;
+}
+.visual-numero{
+font-size: 2.5rem;
+position: absolute;
+text-align: center;
+top: 8.5rem;
+left: 2.5rem;
+
+}
+@media (min-width: 950px) {
+    .visual-fecha{
+        display: flex;
+        position: absolute;
+        top: 15rem;
+        left: 29rem;
+    }
+    .visual-nombre{
+        position: absolute;
+        top: 15rem;
+        left: 3rem;
+        text-transform: uppercase;
+    }
+    .visual-numero{
+    font-size: 2.5rem;
+    position: absolute;
+    text-align: center;
+    top: 8.5rem;
+    left: 2.5rem;
+    
+    }
+}
+@media (min-width: 950px) {
+    .visual-numero{
+        font-size: 3rem;
+        }
+}
+@media (min-width: 950px) {
+    .card-front{
+        position: absolute;
+        top: 12rem;
+        left: 8%;
+    }
+}
+/*CARD-BACK*/
+.card-back{
+    position: absolute;
+    top: 4%;
+    right: 5%;
+}
+.card-back__contenido{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 7rem;
+    right: 4rem;
+}
+@media (min-width: 950px) {
+    .card-back{
+        position: absolute;
+        top: 34rem;
+        left: 17%;
+    }
+    .card-back__contenido{
+        font-size: 1.5rem;
+        position: absolute;
+        top: 8.5rem;
+        left: 28rem;
+    }
+}
+/*IMAGEN FONDO*/
+    .logo{
+        background-image: url(../images/card-logo.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 9rem;
+        height: 8rem;
+        top: 2rem;
+        left: 2rem;
+    }
+
+/*FORMULARIO*/
+input{
+    font-size: 1.5rem;
+    border-color: var(--Light);
+    border-style: solid;
+    border-width: .1rem;
+    
+}
+.centrar-vertical{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ margin: 0 2rem;
+}
+
+.formulario{
+    position: relative;
+    top: 13rem;
+}   
+@media (min-width: 950px) {
+    .centrar-vertical{
+        position: relative;
+    }
+    
+    .formulario{
+        position: relative;
+        top: 12rem;
+        left: 80%;
+
+    }
+}
+.text-form{
+    color: var(--Very);
+}
+label{
+    text-transform:uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.acomodar{
+    display: flex;
+    flex-direction: column;
+}
+.escri{
+    border-radius: 1rem;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+/*Error*/
+.error{
+    text-align: left;
+    color: red;
+}
+.border-error input{
+    border-color: red;
+}
+/* FECHA */
+.fecha-cvc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.month-year{
+    display: flex;
+}
+.month-year input{
+    width: 6rem;
+    margin-right: 1.5rem;
+
+}
+.acomodar input{
+    padding-left: 1rem;
+}
+.cvc-tarjeta{
+    margin-top: 1rem;
+}
+.cvc-tarjeta input{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+ 
+}
+/* BOTON */
+.boton{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.boton input{
+    border: none;
+    padding: 1.5rem;
+    background-color: var(--Very);
+    color: var(--White);
+    border-radius: 1rem;
+    font-size: 2rem;
+}
+.boton input:hover{
+    cursor: pointer;
+}
+@media (min-width: 950px) {
+    .boton input{
+
+        padding: 1.2rem;
+        font-size: 1.5rem;
+    }
+}
+
+.aprobado{
+    position: absolute;
+    top: 32rem;
+}
+.aprobado-text{
+    position: absolute;
+    top: 40rem;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: var(--Very);
+}
+.aprobado-Parrafo{
+    position: absolute;
+    top: 49rem;
+    font-size: 2.2rem;
+    color: var(--Dark);
+}
+@media (min-width: 950px) {
+    .aprobado{
+        left: 79rem;
+        top: 20rem;
+    }
+    .aprobado-text {
+        top: 28rem;
+        left: 72rem;
+        width: 40rem;
+    }
+    .aprobado-Parrafo{
+        left: 69rem;
+        top: 36rem;
+        width: 40rem;
+    }
+}
+.boton-aprobado{
+    position: absolute;
+    top: 55rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 1.5rem;
+    background-color: var(--Very);
+    color: var(--White);
+    border-radius: 1rem;
+    font-size: 2rem;
+    width: 35rem;
+    text-align: center;
+}
+.boton-aprobado:hover{
+    cursor: pointer;
+}
+@media (min-width: 950px) {
+    .boton-aprobado{
+        left: 65rem;
+        top: 40rem;
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+}

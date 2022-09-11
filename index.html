@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+  <link rel="preload" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+
+  <link rel="preload" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+<main>
+  <div class="todo-contenido tar">
+    <div class="img-fondo">  </div>
+<div class="izq-tarjetas">
+    <div class="aling-tarjetas">
+    <div class="tarjetas">
+      <div class="card-back">
+        <img class="card" src="/images/bg-card-back.png" alt="">
+          <div class="card-back__contenido">
+            <div class="visual-cvc">
+        <p>000</p>
+      </div>
+       </div>
+      </div>
+    <div class="card-front">
+    <img class="card" src="/images/bg-card-front.png" alt="">
+      <div class="logo"></div>
+    <div class="card-front__contenido">
+      <div class="visual-numero">
+    <p>0000 0000 0000 0000</p>
+       </div>
+     
+        <div class="visual-nombre">
+       <p>Jane Appleseed </p>
+      </div>
+      <div class="visual-fecha">
+        <div class="mes">
+          <p>00</p>
+          </div>
+          <p>/</p>
+          <div class="year">
+            <p>00</p>
+          </div>
+       </div>
+ 
+    </div><!--card-front-->
+
+  </div><!--tarjetas-->
+</div><!--aling-tarjetas-->
+
+</div><!--izq-tarjetas-->
+
+<div class="form-responsive">
+  <div class="centrar-vertical">
+  <form class="formulario" action="">
+    <div class="nombre-tarjeta acomodar">
+
+    <label class="text-form" for="nombre">Cardholder Name</label>
+    <input class="escri" type="text" placeholder="e.g. Jane Appleseed" id="names" maxlength="32">
+    <div class="error error-nombre"></div>
+  </div>
+
+  <div class="numero-tarjeta acomodar">
+    <label class="text-form" for="numero">Card Number</label>
+    <input class="escri" type="text" placeholder="e.g. 1234 5678 9123 0000" id="number" maxlength="19">
+    <div class="error error-numero"></div>
+  </div>
+
+          <div class="fecha-cvc">
+      <div class="fecha-tarjeta acomodar"> 
+          <label class="text-form" for="fecha">Exp. Date (MM/YY)</label>
+            <div class="month-year">
+              <div class="mes-tarjeta">
+          <input class="escri" type="text" placeholder="MM" id="month" maxlength="2">
+        </div>
+        <div class="year-tarjeta">
+          <input class="escri" type="text" placeholder="YY" id="year" maxlength="2">
+        </div>
+              </div><!--month-year-->
+              <div class="error error-mes"></div>
+        </div>  <!--fecha-tarjeta-->
+
+          <div class="cvc-tarjeta">
+          <label class="text-form" for="CVC">CVC</label>
+
+          <input class="escri" type="text" placeholder="e.g. 123" id="cvc" maxlength="3">
+          <div class="error error-cvc"></div>
+          </div><!--cvc-->
+            </div><!--fecha-cvc-->
+<div class="boton">
+  <input class="boton-text" type="submit" value="Confirm" id=confirm>
+    </div>
+  </form>
+</div>  <!-- Centrar vertical -->
+</div>
+</div>
+</main>
+  <!--  -->
+  <script src="/scripts/scripts.js"></script>
+</body>
+</html>
